@@ -1,0 +1,76 @@
+'''
+for x in "h00":
+    print(x[0])
+    print(None)
+print("out of for loop")
+
+s = "UCSB"
+print(s[4])
+
+try:
+    for i in range(5):
+        x = i / (i-5)
+except:
+    print("EXCEPTION CAUGHT")
+print("RESUMING EXECUTION")
+
+cs9 = "CS9"
+try:
+    for s in cs9:
+        x = len(cs9) + s
+    print("DONE LOOPING")
+except:
+    print("EXCEPTION CAUGHT")
+'''
+
+def countNonCharacters(s,c):
+    '''
+    s is any string and c is any string of length 1.
+    this function returns the number of characters in s that are not equal to c.
+    case-sensitive.
+    '''
+
+'''
+    total_count = 0
+
+    for character in s:
+        if character != c:
+            total_count += 1
+        else:
+            total_count += 0
+    
+    return total_count
+
+
+
+assert countNonCharacters("", "a") == 0
+assert countNonCharacters("CMPSC9", "a") == 6
+assert countNonCharacters("CMPSC9", "C") == 4
+assert countNonCharacters("ZZZ", "Z") == 0
+assert countNonCharacters("aAaAa", "A") == 3
+'''
+
+class Car:
+    def __init__(self, model, year):
+        self.model = model
+        self.year = year
+
+    def setModel(self, model):
+        self.model = model
+    
+    def setYear(self, year):
+        self.year = year
+
+    def getModel(self):
+        return self.model
+    
+    def getYear(self):
+        return self.year
+
+c1 = Car("Prius", 2018)
+assert c1.getModel() == "Prius"
+assert c1.getYear() == 2018
+c1.setModel("Accord")
+c1.setYear(2015)
+assert c1.getModel() == "Accord"
+assert c1.getYear() == 2015

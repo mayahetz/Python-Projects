@@ -1,0 +1,21 @@
+class A:
+    def x(self):
+        return "A.x"
+class B(A):
+    def y(self):
+        return "B.y"
+class C(B):
+    def z(self):
+        return "C.z"
+class D(A):
+    def z(self):
+        return "D.z"
+b = B()
+d = D()
+
+print(b.x())
+print(b.y()) 
+# print(b.z()) 
+print(d.x()) 
+# print(d.y()) 
+print(d.z())
